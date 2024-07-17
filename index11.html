@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHENGANNUR CHITTS PVT LIMITED</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="st2.css" />
+  </head>
+  <body>
+    <BR>
+    <h1>CHENGANNUR CHITTS </h1>
+    <H3>COLLECTION SHEET</H3>
+    <div class="container">
+      <form method="post"action=""name="contact-form">
+        <div class="inp-wrapper">
+      
+        <div class="amount-wrapper" >
+          <label for="branch">Branch:</label>
+          <input type="text" name="branch" id="branch" placeholder="TYPE BRANCH NAME" style="text-transform:uppercase" required/>
+        </div>  
+        <div class="amount-wrapper" >
+          <label for="Deposited">Staff Name:</label>
+          <input type="text" name="Deposited" id="Deposited" placeholder="BANK DEPOSITED BY" style="text-transform:uppercase" required/>
+        </div>  
+        <div class="amount-wrapper">
+          <label for="date-1">Bank Deposite Date</label>
+          <input type="date" name="Bank Deposite Date" id="date-1" required/>
+        </div>
+        <div class="amount-wrapper">
+          <label for="date-2">Recipt Date</label>
+          <input type="date"name="recipt-date" id="date-2" required/>
+        </div>
+        <div class="amount-wrapper" >
+          <label for="name">Customer Name</label>
+          <input type="text" name="customer-name" id="cust-name"  required/>
+        </div>      
+</div>
+<br>
+     <div class="inp-wrapper">
+        <div class="amount-wrapper" >
+          <label for="chit-num">Chity Number</label>
+          <input type="text" name="chit-number" id="chit-num" required/>
+        </div>
+        <div class="amount-wrapper" >
+          <label for="chi-int">Chitty Instalment</label>
+          <input type="number" name="chity-instalment" id="chit-int" required/>
+        </div>
+        <div class="amount-wrapper" >
+          <label for="rep-num">Recipt Number</label>
+          <input type="number" name="recipt-num" id="rep-num" required/>
+        </div>
+        <div class="amount-wrapper" >
+          <label for="amount">Amount</label>
+          <input type="number" name="amount" id="amount" required/>
+        </div> 
+        <div class="amount-wrapper" >
+          <label for="bankamount">Total Bank Amount</label>
+          <input type="number" name="bank-amount" id="bankamount" required/>
+        </div> 
+      </div>
+      <div class="inp-wrapper2">
+      <button type="button" onclick="testVariable()" >INSERT</button>
+    </div>
+    <div  class="container2" id="output"></div>
+
+      <div class="inp-wrapper3">
+        <a>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      <button id="submit">SAVE </button></a>
+    </div>
+      <div class="inp-wrapper4">
+        <a>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      <button type="button" value="CLEAR" onclick="window.location.reload()">CLEAR</button> </a>
+      </div>
+    </div>
+    </div>
+      <br>
+</form>
+    </div> 
+    </div>
+   
+    <!-- Script -->
+    <script src="Google Sheet.js"></script>
+    <script>
+      function testVariable()   {
+          var strText = document.getElementById("cust-name").value;          
+          var strText1 = document.getElementById("branch").value;
+          var strText2 = document.getElementById("date-1").value;
+          var strText3 = document.getElementById("chit-num").value;
+          var strText4 = document.getElementById("amount").value;
+          var strText5 = document.getElementById("chit-int").value;
+          var strText6 = document.getElementById("bankamount").value;
+          var strText7 = document.getElementById("Deposited").value;
+          var result = 'NAME = '+strText.toUpperCase() + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 '
+          + ',Branch =' + strText1 + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  '
+          +',Date ='+strText2 +'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  '
+          +',Chitty Number ='+strText3 +'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  '
+           +',Amount ='+strText4 + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  '
+           +',Chitty Instalment ='+strText5 +'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  '
+           +',Bank Amount ='+strText6 +'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  '
+           +',deposited by ='+strText7 +'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  ' ;
+         document.getElementById('output').textContent = result;
+         
+        
+      
+      
+    }
+  </script>
+  </body>
+</html>
